@@ -1,0 +1,136 @@
+/* TODO: inserite il CSS necessario per completare il MHW! */
+
+div.checked{
+	background-color: #cfe3ff;
+}
+
+.unchecked{
+	opacity: 0.6;
+}
+
+/*Aggiungo alcune modifiche al background per un puro fattore estetico*/
+section.question-name{
+	background-image: url("images/smwallpaper.png");
+
+}
+section.question-name h1{
+	background-color: rgba(0, 0, 0, .2);
+	color: whitesmoke;
+}
+.choice-grid{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.choice-grid div{	
+	background-color: #f4f4f4;
+
+	border: 1px solid #dcdcdc;
+	padding: 10px 10px;
+	margin: 0px 0px 20px 0px;
+
+	width: calc(32.5% - 22px);
+	}
+
+.choice-grid img{
+	width: 100%;
+}
+.choice-grid img.checkbox{
+	display: block;
+}
+
+.reset_button{
+	background-color: #cecece;
+	color: black;
+
+	height: 50px;
+	width: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.reset_button:hover{
+	background-color: #e0e0e0;
+}
+
+.result h1{
+	margin: 0px;
+}
+.result{
+	margin: 20px 0px;
+	padding: 20px;
+}
+
+/*Implemento le modifiche inerenti all'homework 3 per il funzionamento delle REST API*/
+form {
+	width: 50%;
+	margin-left: 700px;
+	padding-bottom: 20px;
+}
+h2{
+	font-size: 1.4em;
+}
+
+#album-view{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+#album-view section {
+	background-color: rgba(0,0,0,0.1);
+	display: flex;
+	justify-content:  center;
+	align-items: center;
+}
+
+#album-view .album{
+	padding: 20px;
+
+	max-width: 45%;
+	max-height: 75%;
+	margin-left: 30px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#album-view img{
+	max-width: 50%;
+	max-height: 50%;
+}
+
+
+
+
+/*MEDIA QUERY->aggiungo qualche riga di codice per migliorare l'estetica in mobile mode*/
+
+@media (max-width: 700px){
+    article {
+        width: 95%;
+    }
+    header div span {
+        display: none;
+    }
+    .question-name{
+        height: 200px;
+
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+    }
+    .question-name h1{
+        font-size: 1.9rem;
+    }
+
+}
+@media(max-width: 500px){
+    .choice-grid div {
+        width: calc(49% - 22px);
+    }
+}
+
